@@ -1,0 +1,216 @@
+/* Fuente y base */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.7;
+  font-size: 18px; /* Aumentado para accesibilidad */
+}
+
+/* Header fijo, fondo translúcido y contenido alineado */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(27, 94, 32, 0.95);
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+/* Contenedor para logo y título */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  height: 3rem;
+  width: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem; /* Más grande para mejor lectura */
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Navegación */
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem; /* Más grande */
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #a5d6a7;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 60px;
+}
+
+/* Títulos */
+h2 {
+  color: #388e3c;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+p {
+  font-size: 1.15rem; /* Más grande */
+  margin-bottom: 15px;
+}
+
+/* Listas */
+ul {
+  padding-left: 20px;
+  font-size: 1.15rem;
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Mapas */
+.map-container,
+.satelital iframe {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Masterplan */
+.masterplan img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+/* Botón CTA */
+.cta-button {
+  display: inline-block;
+  background-color: #43a047;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2e7d32;
+}
+
+/* Animaciones suaves */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px; /* Aumentado */
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-content {
+    justify-content: center;
+  }
+
+  .logo {
+    height: 2.5rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  ul {
+    font-size: 1.05rem;
+  }
+}
