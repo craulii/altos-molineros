@@ -4,17 +4,23 @@ const navMenu = document.getElementById('nav-menu');
 const menuIcon = document.getElementById('menu-icon');
 
 menuToggle.addEventListener('click', () => {
-  const isHidden = navMenu.hasAttribute('hidden');
+  navMenu.classList.toggle('active');
+  const expanded = navMenu.classList.contains('active');
 
-  if (isHidden) {
-    navMenu.removeAttribute('hidden');
-    menuToggle.setAttribute('aria-expanded', 'true');
-    menuToggle.setAttribute('aria-label', 'Cerrar menú');
-    menuIcon.textContent = '▲';
+  menuToggle.setAttribute('aria-expanded', expanded.toString());
+  menuToggle.setAttribute('aria-label', expanded ? 'Cerrar menú' : 'Abrir menú');
+  menuIcon.textContent = expanded ? '▲' : '▼';
+});
+
+// Mostrar/Ocultar header al hacer scroll
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    header.style.transform = "translateY(-100%)";
   } else {
-    navMenu.setAttribute('hidden', '');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Abrir menú');
-    menuIcon.textContent = '▼';
+    header.style.transform = "translateY(0)";
   }
+  lastScrollY = window.scrollY;
 });

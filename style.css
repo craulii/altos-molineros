@@ -28,6 +28,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header-content {
@@ -204,10 +205,15 @@ footer {
     display: block;
   }
 
-  .nav-menu {
-    flex-direction: column;
-    display: none;
-  }
+.nav-menu {
+  flex-direction: column;
+  display: none !important;
+}
+
+.nav-menu.active {
+  display: flex !important;
+}
+
 
   .nav-menu[hidden] {
     display: none;
@@ -241,4 +247,15 @@ footer {
   main {
     padding: 20px 10px;
   }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
