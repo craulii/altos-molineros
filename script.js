@@ -12,15 +12,24 @@ menuToggle.addEventListener('click', () => {
   menuIcon.textContent = expanded ? '▲' : '▼';
 });
 
-// Mostrar/Ocultar header al hacer scroll
+// Mostrar/Ocultar header al hacer scroll con umbral y comportamiento suave
 let lastScrollY = window.scrollY;
 const header = document.querySelector("header");
+const threshold = 100; // px que hay que scrollear antes de ocultar header
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > lastScrollY) {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= 0) {
+    // Si estamos en la parte superior, siempre mostrar header
+    header.style.transform = "translateY(0)";
+  } else if (currentScroll > lastScrollY && currentScroll > threshold) {
+    // Si scrollea hacia abajo y pasó el umbral, ocultar header
     header.style.transform = "translateY(-100%)";
-  } else {
+  } else if (currentScroll < lastScrollY) {
+    // Si scrollea hacia arriba, mostrar header
     header.style.transform = "translateY(0)";
   }
-  lastScrollY = window.scrollY;
+  
+  lastScrollY = currentScroll;
 });
