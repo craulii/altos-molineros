@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Altos de Molineros</title>
+
+  <!-- Fuentes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS y Lightbox -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="header-content">
+      <img src="images/logo.jpg" alt="Logo Altos de Molineros" class="logo" />
+      <h1>Altos de Molineros</h1>
+    </div>
+
+    <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+      Menú <span id="menu-icon">▼</span>
+    </button>
+
+    <nav>
+      <ul class="nav-menu" id="nav-menu" hidden>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#masterplan">Máster Plan</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" data-aos="fade-up">
+      <h2>Bienvenido</h2>
+      <p>Descubre <strong>Altos de Molineros</strong>, un exclusivo proyecto de parcelas en el corazón del Valle de Colchagua. Un entorno natural, tranquilo y con conectividad privilegiada.</p>
+      <a href="https://wa.me/56912345678" class="cta-button" target="_blank" rel="noopener">Agendar visita por WhatsApp</a>
+    </section>
+
+    <section id="proyecto" data-aos="fade-up">
+      <h2>Sobre el Proyecto</h2>
+      <p>El proyecto <strong>Altos de Molineros</strong> está ubicado en pleno Valle de Colchagua, en el sector Rinconada de Molineros, comuna de Peralillo (VI Región del Libertador Bernardo O’Higgins). Está próximo a la <strong>Viña Los Vascos</strong>, una viña premium reconocida mundialmente, con más de 640 hectáreas de viñedos.</p>
+      <p>Este desarrollo contempla solo <strong>11 parcelas de 5.000 m²</strong> con topografías variadas (lomajes, pie de cerro), todas con vistas privilegiadas y paisajes únicos. Las parcelas están listas para escriturar y cuentan con urbanización completa: caminos asfaltados, agua potable y de pozo, electricidad y acceso a fibra óptica.</p>
+      <p>La ubicación es estratégica: a pasos de escuela, centro médico, supermercados, media luna y estadio. Excelente conectividad a zonas urbanas y turísticas: a 150 min de Santiago, 20 min de Santa Cruz, 50 min de Pichilemu y 45 min del Lago Rapel.</p>
+      <p>El reglamento del proyecto está diseñado para proteger el entorno, seleccionando <strong>materiales, formas y colores</strong> que se integran armónicamente al paisaje. La propuesta arquitectónica combina <em>tradición y modernidad</em>, destacando el valor de la zona central de Chile.</p>
+      <p><strong>Altos de Molineros</strong> promueve soluciones habitacionales sustentables para primera o segunda vivienda, considerando casas con jardín, piscina, quincho y estacionamiento.</p>
+    </section>
+
+    <section id="galeria" data-aos="fade-up">
+      <h2>Galería</h2>
+      <div class="galeria">
+        <!-- Galería de imágenes con Lightbox -->
+        <a href="images/imagen1.jpg" data-lightbox="galeria"><img src="images/imagen1.jpg" alt="Imagen 1" /></a>
+        <a href="images/imagen2.jpg" data-lightbox="galeria"><img src="images/imagen2.jpg" alt="Imagen 2" /></a>
+        <a href="images/imagen3.jpg" data-lightbox="galeria"><img src="images/imagen3.jpg" alt="Imagen 3" /></a>
+        <a href="images/imagen4.jpg" data-lightbox="galeria"><img src="images/imagen4.jpg" alt="Imagen 4" /></a>
+        <a href="images/imagen5.jpg" data-lightbox="galeria"><img src="images/imagen5.jpg" alt="Imagen 5" /></a>
+        <a href="images/imagen6.jpg" data-lightbox="galeria"><img src="images/imagen6.jpg" alt="Imagen 6" /></a>
+        <a href="images/imagen7.jpg" data-lightbox="galeria"><img src="images/imagen7.jpg" alt="Imagen 7" /></a>
+        <a href="images/imagen8.jpg" data-lightbox="galeria"><img src="images/imagen8.jpg" alt="Imagen 8" /></a>
+        <a href="images/imagen9.jpg" data-lightbox="galeria"><img src="images/imagen9.jpg" alt="Imagen 9" /></a>
+        <a href="images/imagen10.jpg" data-lightbox="galeria"><img src="images/imagen10.jpg" alt="Imagen 10" /></a>
+      </div>
+    </section>
+
+    <section id="ubicacion" data-aos="fade-up">
+      <h2>Ubicación</h2>
+      <p>Rinconada de Molineros, Peralillo – VI Región, Chile.</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" allowfullscreen loading="lazy" style="border:0;" title="Mapa Ubicación Altos de Molineros"></iframe>
+      </div>
+    </section>
+
+    <section id="masterplan" data-aos="fade-up">
+      <h2>Máster Plan y Ubicación Satelital</h2>
+
+      <div class="masterplan">
+        <h3>Máster Plan</h3>
+        <img src="plan.jpg" alt="Máster Plan del Proyecto" loading="lazy" />
+      </div>
+
+      <div class="satelital">
+        <h3>Vista Satelital</h3>
+        <img src="images/satelital.jpg" alt="Máster Plan del Proyecto" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="contacto" data-aos="fade-up">
+      <h2>Contacto</h2>
+      <ul>
+        <li>📞 WhatsApp: <a href="https://wa.me/56912345678">+56 9 1234 5678</a></li>
+        <li>📧 Correo: <a href="mailto:contacto@altosdemolineros.cl">contacto@altosdemolineros.cl</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <a href="https://wa.me/56912345678" class="whatsapp-float" target="_blank">
+    <img src="WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <footer>
+    <p>&copy; 2025 Altos de Molineros. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
